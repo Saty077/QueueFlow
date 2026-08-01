@@ -121,3 +121,18 @@ export const logout = wrapAsync(async (req: Request, res: Response) => {
     message: "Logged out successfully",
   });
 });
+
+export const getMe = wrapAsync(async (req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    message: "You are authenticated",
+    user: req.user,
+  });
+});
+
+export const adminOnly = wrapAsync(async (req: Request, res: Response) => {
+  res.status(200).json({
+    success: true,
+    message: "You are an admin, welcome",
+  });
+});

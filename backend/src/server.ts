@@ -3,11 +3,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db";
+import errorMiddleware from "./middlewares/errorMiddleware";
+import authRoutes from "./routes/authRoutes";
 
 dotenv.config();
-
-//hey copilot can you see my redlines? why are they appearing?
-//hey copilot can you see my redlines? why are they appearing?
 
 const app: Application = express();
 
@@ -23,6 +22,10 @@ app.use(cookieParser());
 app.get("/api/health", (req, res) => {
   res.status(200).json({ status: "ok", message: "Server is running" });
 });
+
+app.use("/api/auth", authRoutes);
+
+app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 5000;
 
