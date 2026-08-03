@@ -35,7 +35,6 @@ through Pending → Processing → Completed/Failed.
 
 ## Folder Structure
 
-\`\`\`
 QueueFlow/
 ├── backend/
 │ ├── src/
@@ -48,7 +47,8 @@ QueueFlow/
 │ │ ├── types/ # Shared TS types
 │ │ └── server.ts
 │ ├── Dockerfile
-│ └── docs/QueueFlow.postman_collection.json
+│ └── docs/
+│ └── QueueFlow.postman_collection.json
 ├── frontend/
 │ ├── src/
 │ │ ├── app/ # Next.js App Router pages
@@ -59,14 +59,13 @@ QueueFlow/
 │ │ └── types/
 │ └── Dockerfile
 └── docker-compose.yml
-\`\`\`
 
 ## Installation
 
 ### Option A — Docker (recommended, no local Mongo/Redis needed)
 
 \`\`\`powershell
-git clone [<repo-url>](https://github.com/Saty077/QueueFlow)
+git clone [<https://github.com/Saty077/QueueFlow>](https://github.com/Saty077/QueueFlow)
 cd QueueFlow
 docker-compose up --build
 \`\`\`
