@@ -20,9 +20,7 @@ export default function TaskCard({
   return (
     <div style={styles.card}>
       <div>
-        <Link href={`/tasks/${task._id}`} style={styles.title}>
-          {task.title}
-        </Link>
+        <Link href={`/tasks/${task._id}`}>{task.title}</Link>
         <p style={styles.date}>{new Date(task.createdAt).toLocaleString()}</p>
       </div>
       <div style={styles.actions}>
@@ -54,7 +52,7 @@ const styles = {
     padding: "12px 16px",
     marginBottom: "8px",
   },
-  title: { fontWeight: 600, textDecoration: "none", color: "#171717" },
+
   date: { margin: "4px 0 0", fontSize: "12px", color: "#666" },
   actions: { display: "flex", alignItems: "center", gap: "8px" },
   badge: {
@@ -71,6 +69,7 @@ const styles = {
     borderRadius: "4px",
     background: "#fff",
     cursor: "pointer",
+    color: "black",
   },
   btnDanger: {
     padding: "6px 10px",

@@ -77,6 +77,7 @@ const styles = {
     borderRadius: "4px",
     background: "#fff",
     cursor: "pointer",
+    color: "black",
   },
   main: { padding: "24px" },
 };
